@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <>
       {/* <!-- Begin Main Header Area --> */}
       <header className="main-header-area">
+        {/* ============== HEADER ============== */}
         <div className="header-top bg-pronia-primary d-none d-lg-block">
           <div className="container">
             <div className="row align-items-center">
@@ -83,6 +85,9 @@ function Header() {
             </div>
           </div>
         </div>
+        {/* ============== HEADER ============== */}
+
+        {/* ============== Header + logo + search ============== */}
         <div className="header-middle py-30">
           <div className="container">
             <div className="row align-items-center">
@@ -90,69 +95,26 @@ function Header() {
                 <div className="header-middle-wrap position-relative">
                   <div className="header-contact d-none d-lg-flex">
                     <i className="pe-7s-call"></i>
-                    <a href="tel://+00-123-456-789">+00 123 456 789</a>
+                    <a href="tel://+00-123-456-789">09XXXXXXXX</a>
                   </div>
 
-                  <a href="index.html" className="header-logo">
+                  {/* ========= LOGO =========== */}
+                  <Link to="/">
                     <img src="assets/images/logo/dark.png" alt="Header Logo" />
-                  </a>
+                  </Link>
 
                   <div className="header-right">
                     <ul>
-                      <li>
-                        <a
-                          href="#exampleModal"
-                          className="search-btn bt"
-                          data-bs-toggle="modal"
-                          data-bs-target="#exampleModal"
-                        >
-                          <i className="pe-7s-search"></i>
-                        </a>
-                      </li>
-                      <li className="dropdown d-none d-lg-block">
-                        <button
-                          className="btn btn-link dropdown-toggle ht-btn p-0"
-                          type="button"
-                          id="settingButton"
-                          data-bs-toggle="dropdown"
-                          aria-label="setting"
-                          aria-expanded="false"
-                        >
-                          <i className="pe-7s-users"></i>
-                        </button>
-                        <ul
-                          className="dropdown-menu"
-                          aria-labelledby="settingButton"
-                        >
-                          <li>
-                            <a className="dropdown-item" href="my-account.html">
-                              My account
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="dropdown-item"
-                              href="login-register.html"
-                            >
-                              Login | Register
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="d-none d-lg-block">
-                        <a href="wishlist.html">
-                          <i className="pe-7s-like"></i>
-                        </a>
-                      </li>
+                      <li>search</li>
+
                       <li className="minicart-wrap me-3 me-lg-0">
-                        <a
-                          href="#miniCart"
-                          className="minicart-btn toolbar-btn"
-                        >
+                        <Link to="/cart" className="minicart-btn toolbar-btn">
                           <i className="pe-7s-shopbag"></i>
                           <span className="quantity">3</span>
-                        </a>
+                        </Link>
                       </li>
+
+                      {/* ======= MOBILE =====  */}
                       <li className="mobile-menu_wrap d-block d-lg-none">
                         <a
                           href="#mobileMenu"
@@ -168,6 +130,9 @@ function Header() {
             </div>
           </div>
         </div>
+        {/* ============== Header + logo + search ============== */}
+
+        {/* ============== NAV ============== */}
         <div className="header-bottom d-none d-lg-block">
           <div className="container">
             <div className="row">
@@ -176,19 +141,11 @@ function Header() {
                   <nav className="main-nav">
                     <ul>
                       <li className="drop-holder">
-                        <a href="index.html">Home</a>
-                        <ul className="drop-menu">
-                          <li>
-                            <a href="index.html">Home One</a>
-                          </li>
-                          <li>
-                            <a href="index-2.html">Home Two</a>
-                          </li>
-                        </ul>
+                        <Link to="/">Home</Link>
                       </li>
                       <li className="megamenu-holder">
-                        <a href="shop.html">Shop</a>
-                        <ul className="drop-menu megamenu">
+                        <Link to="/listProduct">Shop</Link>
+                        {/* <ul className="drop-menu megamenu">
                           <li>
                             <span className="title">Shop Layout</span>
                             <ul>
@@ -282,24 +239,13 @@ function Header() {
                               </li>
                             </ul>
                           </li>
-                        </ul>
+                        </ul> */}
                       </li>
                       <li>
-                        <a href="about">About Us</a>
+                        <Link to="/about">About Us</Link>
                       </li>
                       <li className="drop-holder">
-                        <a href="#">Pages</a>
-                        <ul className="drop-menu">
-                          <li>
-                            <a href="faq.html">FAQ</a>
-                          </li>
-                          <li>
-                            <a href="404.html">Error 404</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="contact">Contact Us</a>
+                        <Link to="/contact">Contact</Link>
                       </li>
                     </ul>
                   </nav>
@@ -308,6 +254,9 @@ function Header() {
             </div>
           </div>
         </div>
+        {/* ============== NAV ============== */}
+
+        {/* ================== NAV AFTER SCROLL =============== */}
         <div className="header-sticky py-4 py-lg-0">
           <div className="container">
             <div className="header-nav position-relative">
@@ -322,141 +271,16 @@ function Header() {
                     <nav className="main-nav">
                       <ul>
                         <li className="drop-holder">
-                          <a href="index.html">Home</a>
-                          <ul className="drop-menu">
-                            <li>
-                              <a href="index.html">Home One</a>
-                            </li>
-                            <li>
-                              <a href="index-2.html">Home Two</a>
-                            </li>
-                          </ul>
+                          <Link to="/">Home</Link>
                         </li>
                         <li className="megamenu-holder">
-                          <a href="shop.html">Shop</a>
-                          <ul className="drop-menu megamenu">
-                            <li>
-                              <span className="title">Shop Layout</span>
-                              <ul>
-                                <li>
-                                  <a href="shop.html">Shop Default</a>
-                                </li>
-                                <li>
-                                  <a href="shop-grid-fullwidth.html">
-                                    Shop Grid Fullwidth
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-right-sidebar.html">
-                                    Shop Right Sidebar
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-list-fullwidth.html">
-                                    Shop List Fullwidth
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-list-left-sidebar.html">
-                                    Shop List Left Sidebar
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-list-right-sidebar.html">
-                                    Shop List Right Sidebar
-                                  </a>
-                                </li>
-                              </ul>
-                            </li>
-                            <li>
-                              <span className="title">Product Style</span>
-                              <ul>
-                                <li>
-                                  <a href="single-product-variable.html">
-                                    Single Product Variable
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="single-product-group.html">
-                                    Single Product Group
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="single-product.html">
-                                    Single Product Default
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="single-product-affiliate.html">
-                                    Single Product Affiliate
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="single-product-sale.html">
-                                    Single Product Sale
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="single-product-sticky.html">
-                                    Single Product Sticky
-                                  </a>
-                                </li>
-                              </ul>
-                            </li>
-                            <li>
-                              <span className="title">Product Related</span>
-                              <ul>
-                                <li>
-                                  <a href="my-account.html">My Account</a>
-                                </li>
-                                <li>
-                                  <a href="login-register.html">
-                                    Login | Register
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="cart.html">Shopping Cart</a>
-                                </li>
-                                <li>
-                                  <a href="wishlist.html">Wishlist</a>
-                                </li>
-                                <li>
-                                  <a href="compare.html">Compare</a>
-                                </li>
-                                <li>
-                                  <a href="checkout.html">Checkout</a>
-                                </li>
-                              </ul>
-                            </li>
-                          </ul>
+                          <Link to="/listProduct">Shop</Link>
                         </li>
                         <li className="drop-holder">
-                          <a href="blog.html">Blog</a>
-                          <ul className="drop-menu">
-                            <li>
-                              <a href="blog-listview.html">Blog List View</a>
-                            </li>
-                            <li>
-                              <a href="blog-detail.html">Blog Detail</a>
-                            </li>
-                          </ul>
+                          <Link to="/about">About Us</Link>
                         </li>
                         <li>
-                          <a href="about.html">About Us</a>
-                        </li>
-                        <li className="drop-holder">
-                          <a href="#">Pages</a>
-                          <ul className="drop-menu">
-                            <li>
-                              <a href="faq.html">FAQ</a>
-                            </li>
-                            <li>
-                              <a href="404.html">Error 404</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="contact.html">Contact Us</a>
+                          <Link to="/contact">Contact</Link>
                         </li>
                       </ul>
                     </nav>
@@ -465,60 +289,16 @@ function Header() {
                 <div className="col-lg-3 col-6">
                   <div className="header-right">
                     <ul>
-                      <li>
-                        <a
-                          href="#exampleModal"
-                          className="search-btn bt"
-                          data-bs-toggle="modal"
-                          data-bs-target="#exampleModal"
-                        >
-                          <i className="pe-7s-search"></i>
-                        </a>
-                      </li>
-                      <li className="dropdown d-none d-lg-block">
-                        <button
-                          className="btn btn-link dropdown-toggle ht-btn p-0"
-                          type="button"
-                          id="stickysettingButton"
-                          data-bs-toggle="dropdown"
-                          aria-label="setting"
-                          aria-expanded="false"
-                        >
-                          <i className="pe-7s-users"></i>
-                        </button>
-                        <ul
-                          className="dropdown-menu"
-                          aria-labelledby="stickysettingButton"
-                        >
-                          <li>
-                            <a className="dropdown-item" href="my-account.html">
-                              My account
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="dropdown-item"
-                              href="login-register.html"
-                            >
-                              Login | Register
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="d-none d-lg-block">
-                        <a href="wishlist.html">
-                          <i className="pe-7s-like"></i>
-                        </a>
-                      </li>
+                      <li>search</li>
+
                       <li className="minicart-wrap me-3 me-lg-0">
-                        <a
-                          href="#miniCart"
-                          className="minicart-btn toolbar-btn"
-                        >
+                        <Link to="/cart" className="minicart-btn toolbar-btn">
                           <i className="pe-7s-shopbag"></i>
                           <span className="quantity">3</span>
-                        </a>
+                        </Link>
                       </li>
+
+                      {/* ======= MOBILE =====  */}
                       <li className="mobile-menu_wrap d-block d-lg-none">
                         <a
                           href="#mobileMenu"
@@ -534,6 +314,8 @@ function Header() {
             </div>
           </div>
         </div>
+        {/* ================== NAV AFTER SCROLL =============== */}
+
         <div className="mobile-menu_wrapper" id="mobileMenu">
           <div className="offcanvas-body">
             <div className="inner-body">
