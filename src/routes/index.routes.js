@@ -1,8 +1,8 @@
 import LayoutDefault from "../Layout/LayoutDefault/LayoutDefault";
 import Home from "../pages/Client/Home/Home";
-import Blog from "../pages/Client/About/About";
 import Contact from "../pages/Client/Contact/Contact";
 import Cart from "../pages/Client/Cart/Cart";
+import About from "../pages/Client/About/About";
 const routes = [
     {
         path: "/",
@@ -14,7 +14,7 @@ const routes = [
             },
             {
                 path: "/about",
-                element: <Blog />,
+                element: <About />,
             },
             {
                 path: "/contact",
