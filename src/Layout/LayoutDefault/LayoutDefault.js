@@ -1,4 +1,3 @@
-import Cart from "../../pages/Client/Cart/Cart";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import { Outlet } from "react-router-dom";
@@ -8,11 +7,9 @@ function LayoutDefault() {
     <>
       <Header />
 
-      {/* <div>
+      <div>
         <Outlet />
-      </div> */}
-
-      <Cart />
+      </div>
 
       <Footer />
     </>
