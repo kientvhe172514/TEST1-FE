@@ -15,9 +15,6 @@ function LayoutDefault() {
 
       <Footer />
 
-      <ProductDetail/>
-
-      <Cart/>
     </>
   );
 }
