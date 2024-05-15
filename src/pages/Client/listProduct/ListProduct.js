@@ -57,7 +57,7 @@ function ListProduct() {
                       {/* PRODUCT CONTENT */}
                       <div class="product-item">
                         <div class="product-img">
-                          <a href="single-product-variable.html">
+                          <a href="productDetail">
                             <img
                               class="primary-img"
                               src="assets/images/product/medium-size/1-1-270x300.jpg"
