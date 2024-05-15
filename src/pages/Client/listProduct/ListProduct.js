@@ -1,4 +1,5 @@
 import React from "react";
+import Product from "../../../components/Product/Product";
 
 function ListProduct() {
   return (
@@ -53,7 +54,7 @@ function ListProduct() {
                   aria-labelledby="grid-view-tab"
                 >
                   <div class="product-grid-view row g-y-20">
-                    <div class="col-lg-3 col-md-4 col-sm-6 ">
+                    {/* ================ product =================== */}
                       {/* PRODUCT CONTENT */}
                       <div class="product-item">
                         <div class="product-img">
@@ -148,13 +149,14 @@ function ListProduct() {
                           </div>
                         </div>
                       </div>
-                      {/* PRODUCT CONTENT */}
-                    </div>
+                      <Product/>
+                      <Product/>
+                    {/* ================ product =================== */}
                   </div>
                 </div>
               </div>
               {/* ================ TAB - CONTENT =================== */}
-
+                                  
               {/* ================ PAGINATION =================== */}
               <div class="pagination-area">
                 <nav aria-label="Page navigation example">
