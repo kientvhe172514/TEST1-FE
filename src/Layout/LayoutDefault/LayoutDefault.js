@@ -1,5 +1,6 @@
 import Blog from "../../pages/Client/Blog/Blog";
 import Cart from "../../pages/Client/Cart/Cart";
+import Checkout from "../../pages/Client/Checkout/Checkout";
 import Contact from "../../pages/Client/Contact/Contact";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
@@ -13,6 +14,7 @@ function LayoutDefault() {
       {/* <div>
         <Outlet />
       </div> */}
+      <Checkout/>
       <Contact/>
       <Blog/>
       <Cart />

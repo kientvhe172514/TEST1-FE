@@ -5,29 +5,29 @@ function Footer() {
     <>
       {/* <!-- Begin Footer Area --> */}
       <div
-        class="footer-area"
+        className="footer-area"
         data-bg-image="assets/images/footer/bg/1-1920x465.jpg"
         style={{
           backgroundImage: `url("assets/images/footer/bg/1-1920x465.jpg")`,
         }}
       >
-        <div class="footer-top section-space-top-100 pb-60">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="footer-widget-item">
-                  <div class="footer-widget-logo">
+        <div className="footer-top section-space-top-100 pb-60">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-3">
+                <div className="footer-widget-item">
+                  <div className="footer-widget-logo">
                     <a href="index.html">
                       <img src="assets/images/logo/dark.png" alt="Logo" />
                     </a>
                   </div>
-                  <p class="footer-widget-desc">
+                  <p className="footer-widget-desc">
                     Lorem ipsum dolor sit amet, consec adipisl elit, sed do
                     eiusmod tempor
                     <br />
                     incidio ut labore et dolore magna.
                   </p>
-                  <div class="social-link with-border">
+                  <div className="social-link with-border">
                     <ul>
                       <li>
                         <a
@@ -39,7 +39,7 @@ function Footer() {
                           data-tippy-arrow="true"
                           data-tippy-theme="sharpborder"
                         >
-                          <i class="fa fa-facebook"></i>
+                          <i className="fa fa-facebook"></i>
                         </a>
                       </li>
                       <li>
@@ -52,7 +52,7 @@ function Footer() {
                           data-tippy-arrow="true"
                           data-tippy-theme="sharpborder"
                         >
-                          <i class="fa fa-twitter"></i>
+                          <i className="fa fa-twitter"></i>
                         </a>
                       </li>
                       <li>
@@ -65,7 +65,7 @@ function Footer() {
                           data-tippy-arrow="true"
                           data-tippy-theme="sharpborder"
                         >
-                          <i class="fa fa-pinterest"></i>
+                          <i className="fa fa-pinterest"></i>
                         </a>
                       </li>
                       <li>
@@ -78,17 +78,17 @@ function Footer() {
                           data-tippy-arrow="true"
                           data-tippy-theme="sharpborder"
                         >
-                          <i class="fa fa-dribbble"></i>
+                          <i className="fa fa-dribbble"></i>
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-4 pt-40">
-                <div class="footer-widget-item">
-                  <h3 class="footer-widget-title">Useful Links</h3>
-                  <ul class="footer-widget-list-item">
+              <div className="col-lg-2 col-md-4 pt-40">
+                <div className="footer-widget-item">
+                  <h3 className="footer-widget-title">Useful Links</h3>
+                  <ul className="footer-widget-list-item">
                     <li>
                       <a href="#">About Pronia</a>
                     </li>
@@ -107,10 +107,10 @@ function Footer() {
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-4 pt-40">
-                <div class="footer-widget-item">
-                  <h3 class="footer-widget-title">My Account</h3>
-                  <ul class="footer-widget-list-item">
+              <div className="col-lg-2 col-md-4 pt-40">
+                <div className="footer-widget-item">
+                  <h3 className="footer-widget-title">My Account</h3>
+                  <ul className="footer-widget-list-item">
                     <li>
                       <a href="#">Sign In</a>
                     </li>
@@ -129,10 +129,10 @@ function Footer() {
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-4 pt-40">
-                <div class="footer-widget-item">
-                  <h3 class="footer-widget-title">Our Service</h3>
-                  <ul class="footer-widget-list-item">
+              <div className="col-lg-2 col-md-4 pt-40">
+                <div className="footer-widget-item">
+                  <h3 className="footer-widget-title">Our Service</h3>
+                  <ul className="footer-widget-list-item">
                     <li>
                       <a href="#">Payment Methods</a>
                     </li>
@@ -151,19 +151,19 @@ function Footer() {
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-3 pt-40">
-                <div class="footer-contact-info">
-                  <h3 class="footer-widget-title">Got Question? Call Us</h3>
-                  <a class="number" href="tel://123-456-789">
+              <div className="col-lg-3 pt-40">
+                <div className="footer-contact-info">
+                  <h3 className="footer-widget-title">Got Question? Call Us</h3>
+                  <a className="number" href="tel://123-456-789">
                     123 456 789
                   </a>
-                  <div class="address">
+                  <div className="address">
                     <ul>
                       <li>Your Address Goes Here</li>
                     </ul>
                   </div>
                 </div>
-                <div class="payment-method">
+                <div className="payment-method">
                   <a href="#">
                     <img
                       src="assets/images/payment/1.png"
@@ -175,14 +175,14 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="copyright">
-                  <span class="copyright-text">
+        <div className="footer-bottom">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="copyright">
+                  <span className="copyright-text">
                     © 2021 Pronia Made with{" "}
-                    <i class="fa fa-heart text-danger"></i> by
+                    <i className="fa fa-heart text-danger"></i> by
                     <a
                       href="https://hasthemes.com/"
                       rel="noopener"
@@ -201,7 +201,7 @@ function Footer() {
 
       {/* <!-- Begin Modal Area --> */}
       <div
-        class="modal quick-view-modal fade"
+        className="modal quick-view-modal fade"
         id="quickModal"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
@@ -209,12 +209,12 @@ function Footer() {
         aria-labelledby="quickModal"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-header">
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
                 data-tippy="Close"
@@ -225,43 +225,43 @@ function Footer() {
                 data-tippy-theme="sharpborder"
               ></button>
             </div>
-            <div class="modal-body">
-              <div class="modal-wrap row">
-                <div class="col-lg-6">
-                  <div class="modal-img">
-                    <div class="swiper-container modal-slider">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <a href="#" class="single-img">
+            <div className="modal-body">
+              <div className="modal-wrap row">
+                <div className="col-lg-6">
+                  <div className="modal-img">
+                    <div className="swiper-container modal-slider">
+                      <div className="swiper-wrapper">
+                        <div className="swiper-slide">
+                          <a href="#" className="single-img">
                             <img
-                              class="img-full"
+                              className="img-full"
                               src="assets/images/product/large-size/1-1-570x633.jpg"
                               alt="Product Image"
                             />
                           </a>
                         </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="single-img">
+                        <div className="swiper-slide">
+                          <a href="#" className="single-img">
                             <img
-                              class="img-full"
+                              className="img-full"
                               src="assets/images/product/large-size/1-2-570x633.jpg"
                               alt="Product Image"
                             />
                           </a>
                         </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="single-img">
+                        <div className="swiper-slide">
+                          <a href="#" className="single-img">
                             <img
-                              class="img-full"
+                              className="img-full"
                               src="assets/images/product/large-size/1-3-570x633.jpg"
                               alt="Product Image"
                             />
                           </a>
                         </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="single-img">
+                        <div className="swiper-slide">
+                          <a href="#" className="single-img">
                             <img
-                              class="img-full"
+                              className="img-full"
                               src="assets/images/product/large-size/1-4-570x633.jpg"
                               alt="Product Image"
                             />
@@ -271,125 +271,125 @@ function Footer() {
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6 pt-5 pt-lg-0">
-                  <div class="single-product-content">
-                    <h2 class="title">American Marigold</h2>
-                    <div class="price-box">
-                      <span class="new-price">$23.45</span>
+                <div className="col-lg-6 pt-5 pt-lg-0">
+                  <div className="single-product-content">
+                    <h2 className="title">American Marigold</h2>
+                    <div className="price-box">
+                      <span className="new-price">$23.45</span>
                     </div>
-                    <div class="rating-box-wrap">
-                      <div class="rating-box">
+                    <div className="rating-box-wrap">
+                      <div className="rating-box">
                         <ul>
                           <li>
-                            <i class="fa fa-star"></i>
+                            <i className="fa fa-star"></i>
                           </li>
                           <li>
-                            <i class="fa fa-star"></i>
+                            <i className="fa fa-star"></i>
                           </li>
                           <li>
-                            <i class="fa fa-star"></i>
+                            <i className="fa fa-star"></i>
                           </li>
                           <li>
-                            <i class="fa fa-star"></i>
+                            <i className="fa fa-star"></i>
                           </li>
                           <li>
-                            <i class="fa fa-star"></i>
+                            <i className="fa fa-star"></i>
                           </li>
                         </ul>
                       </div>
-                      <div class="review-status">
+                      <div className="review-status">
                         <a href="#">( 1 Review )</a>
                       </div>
                     </div>
-                    <div class="selector-wrap color-option">
-                      <span class="selector-title border-bottom-0">Color</span>
-                      <select class="nice-select wide border-bottom-0 rounded-0">
+                    <div className="selector-wrap color-option">
+                      <span className="selector-title border-bottom-0">Color</span>
+                      <select className="nice-select wide border-bottom-0 rounded-0">
                         <option value="default">Black & White</option>
                         <option value="blue">Blue</option>
                         <option value="green">Green</option>
                         <option value="red">Red</option>
                       </select>
                     </div>
-                    <div class="selector-wrap size-option">
-                      <span class="selector-title">Size</span>
-                      <select class="nice-select wide rounded-0">
+                    <div className="selector-wrap size-option">
+                      <span className="selector-title">Size</span>
+                      <select className="nice-select wide rounded-0">
                         <option value="medium">Medium Size & Poot</option>
                         <option value="large">Large Size With Poot</option>
                         <option value="small">Small Size With Poot</option>
                       </select>
                     </div>
-                    <p class="short-desc">
+                    <p className="short-desc">
                       Lorem ipsum dolor sit amet, consectetur adipisic elit, sed
                       do eiusmod tempo incid ut labore et dolore magna aliqua.
                       Ut enim ad minim veniam, quis nostru exercitation ullamco
                       laboris nisi ut aliquip ex ea commodo consequat. Duis aute
                       irure dolor in reprehenderit in voluptate
                     </p>
-                    <ul class="quantity-with-btn">
-                      <li class="quantity">
-                        <div class="cart-plus-minus">
+                    <ul className="quantity-with-btn">
+                      <li className="quantity">
+                        <div className="cart-plus-minus">
                           <input
-                            class="cart-plus-minus-box"
+                            className="cart-plus-minus-box"
                             value="1"
                             type="text"
                           />
                         </div>
                       </li>
-                      <li class="add-to-cart">
+                      <li className="add-to-cart">
                         <a
-                          class="btn btn-custom-size lg-size btn-pronia-primary"
+                          className="btn btn-custom-size lg-size btn-pronia-primary"
                           href="cart.html"
                         >
                           Add to cart
                         </a>
                       </li>
-                      <li class="wishlist-btn-wrap">
-                        <a class="custom-circle-btn" href="wishlist.html">
-                          <i class="pe-7s-like"></i>
+                      <li className="wishlist-btn-wrap">
+                        <a className="custom-circle-btn" href="wishlist.html">
+                          <i className="pe-7s-like"></i>
                         </a>
                       </li>
-                      <li class="compare-btn-wrap">
-                        <a class="custom-circle-btn" href="compare.html">
-                          <i class="pe-7s-refresh-2"></i>
+                      <li className="compare-btn-wrap">
+                        <a className="custom-circle-btn" href="compare.html">
+                          <i className="pe-7s-refresh-2"></i>
                         </a>
                       </li>
                     </ul>
-                    <ul class="service-item-wrap pb-0">
-                      <li class="service-item">
-                        <div class="service-img">
+                    <ul className="service-item-wrap pb-0">
+                      <li className="service-item">
+                        <div className="service-img">
                           <img
                             src="assets/images/shipping/icon/car.png"
                             alt="Shipping Icon"
                           />
                         </div>
-                        <div class="service-content">
-                          <span class="title">
+                        <div className="service-content">
+                          <span className="title">
                             Free <br /> Shipping
                           </span>
                         </div>
                       </li>
-                      <li class="service-item">
-                        <div class="service-img">
+                      <li className="service-item">
+                        <div className="service-img">
                           <img
                             src="assets/images/shipping/icon/card.png"
                             alt="Shipping Icon"
                           />
                         </div>
-                        <div class="service-content">
-                          <span class="title">
+                        <div className="service-content">
+                          <span className="title">
                             Safe <br /> Payment
                           </span>
                         </div>
                       </li>
-                      <li class="service-item">
-                        <div class="service-img">
+                      <li className="service-item">
+                        <div className="service-img">
                           <img
                             src="assets/images/shipping/icon/service.png"
                             alt="Shipping Icon"
                           />
                         </div>
-                        <div class="service-content">
-                          <span class="title">
+                        <div className="service-content">
+                          <span className="title">
                             Safe <br /> Payment
                           </span>
                         </div>
