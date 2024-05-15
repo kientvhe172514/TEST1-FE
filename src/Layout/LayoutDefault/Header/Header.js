@@ -285,7 +285,7 @@ function Header() {
                         </ul>
                       </li>
                       <li>
-                        <a href="about.html">About Us</a>
+                        <a href="about">About Us</a>
                       </li>
                       <li className="drop-holder">
                         <a href="#">Pages</a>
@@ -299,7 +299,7 @@ function Header() {
                         </ul>
                       </li>
                       <li>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="contact">Contact Us</a>
                       </li>
                     </ul>
                   </nav>
