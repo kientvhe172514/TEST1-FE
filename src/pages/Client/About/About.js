@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Blog() {
+function About() {
   return (
     <>
     {/* <   !-- Begin Main Content Area --> */}
@@ -383,4 +383,4 @@ function Blog() {
   )
 }
 
-export default Blog
+export default About
