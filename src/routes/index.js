@@ -1,7 +1,7 @@
 import LayoutDefault from "../Layout/LayoutDefault/LayoutDefault";
-import Home from "../pages/Home/Home";
+import Home from "../pages/Client/Home/Home";
 import Blog from "../pages/Client/Blog/Blog";
-import Contact from "../pages/Contact/Contact";
+import Contact from "../pages/Client/Contact/Contact";
 
 const routes = [
     {
