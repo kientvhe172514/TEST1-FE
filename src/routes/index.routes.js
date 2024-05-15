@@ -4,6 +4,7 @@ import About from "../pages/Client/About/About";
 import Contact from "../pages/Client/Contact/Contact";
 import Cart from "../pages/Client/Cart/Cart";
 import ListProduct from "../pages/Client/listProduct/ListProduct";
+import ProductDetail from "../pages/Client/ProductDetail/ProductDetail";
 
 const routes = [
     {
@@ -30,6 +31,10 @@ const routes = [
                 path: "/listProduct",
                 element: <ListProduct />,
             },
+            {
+                path: "/productDetail",
+                element: <ProductDetail />,
+            }
         ]
     }
 ];
