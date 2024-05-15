@@ -1,4 +1,4 @@
-import Blog from "../../pages/Client/Blog/Blog";
+import Blog from "../../pages/Client/About/About";
 import Cart from "../../pages/Client/Cart/Cart";
 import Checkout from "../../pages/Client/Checkout/Checkout";
 import Contact from "../../pages/Client/Contact/Contact";
