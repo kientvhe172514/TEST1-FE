@@ -133,7 +133,7 @@ img {
 
 /* ---Section Space--- */
 .section-space-top-100 {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 @media (max-width: 1199px) {
