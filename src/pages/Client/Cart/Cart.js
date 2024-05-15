@@ -15,7 +15,7 @@ function Cart() {
  <div class="main-wrapper">
 
      {/* <!-- Begin Main Header Area --> */}
-     <header class="main-header-area">
+     {/* <header class="main-header-area">
          <div class="header-top bg-pronia-primary d-none d-lg-block">
              <div class="container">
                  <div class="row align-items-center">
@@ -750,7 +750,7 @@ function Cart() {
              </div>
          </div>
          <div class="global-overlay"></div>
-     </header>
+     </header> */}
      {/* <!-- Main Header Area End Here --> */}
 
      {/* <!-- Begin Main Content Area --> */}
