@@ -1,7 +1,9 @@
 import LayoutDefault from "../Layout/LayoutDefault/LayoutDefault";
 import Home from "../pages/Client/Home/Home";
-import Blog from "../pages/Client/Blog/Blog";
+import About from "../pages/Client/About/About";
 import Contact from "../pages/Client/Contact/Contact";
+import Cart from "../pages/Client/Cart/Cart";
+import ListProduct from "../pages/Client/listProduct/ListProduct";
 
 const routes = [
     {
@@ -13,12 +15,20 @@ const routes = [
                 element: <Home />,
             },
             {
-                path: "/blog",
-                element: <Blog />,
+                path: "/about",
+                element: <About />,
             },
             {
                 path: "/contact",
                 element: <Contact />,
+            },
+            {
+                path: "/cart",
+                element: <Cart />,
+            },
+            {
+                path: "/listProduct",
+                element: <ListProduct />,
             },
         ]
     }
