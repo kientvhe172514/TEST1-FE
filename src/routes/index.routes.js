@@ -7,6 +7,7 @@ import ListProduct from "../pages/Client/listProduct/ListProduct";
 import ProductDetail from "../pages/Client/ProductDetail/ProductDetail";
 import LayoutDefaultAdmin from "../Layout/LayoutDefaultAdmin/LayoutDefaultAdmin";
 import Dashboard from "../pages/Admin/Dashboard/Dashboard";
+import PrivateRouter from "../components/PrivateRouter/PrivateRouter";
 
 const routes = [
   {
@@ -44,8 +45,121 @@ const routes = [
     element: <LayoutDefaultAdmin />,
     children: [
       {
-        path: "/admin/dashboard",
-        element: <Dashboard />,
+        element: <PrivateRouter />,
+        children: [
+          {
+            path: "/admin/",
+            element: <Dashboard />,
+          },
+          {
+            path: "/admin/store",
+            // element: <Store />,
+            children: [
+              {
+                path: "/admin/store/",
+                // element: <ListStore />,
+              },
+              {
+                path: "/admin/store/create",
+                // element: <CreateStore />,
+              },
+            ],
+          },
+          {
+            path: "/admin/manager-store",
+            // element: <ManagerStore />,
+            children: [
+              {
+                path: "/admin/manager-store/",
+                // element: <ListStoreManager />,
+              },
+              {
+                path: "/admin/manager-store/create",
+                // element: <CreateStoreManager />,
+              },
+            ],
+          },
+          {
+            path: "/admin/table",
+            // element: <Table />,
+            children: [
+              {
+                path: "/admin/table/",
+                // element: <ListTable />,
+              },
+              {
+                path: "/admin/table/create",
+                // element: <CreateTable />,
+              },
+            ],
+          },
+          {
+            path: "/admin/employee",
+            // element: <Employee />,
+            children: [
+              {
+                path: "/admin/employee/",
+                // element: <ListEmployee />,
+              },
+              {
+                path: "/admin/employee/create",
+                // element: <CreateEmployee />,
+              },
+            ],
+          },
+          {
+            path: "/admin/category",
+            // element: <Category />,
+            children: [
+              {
+                path: "/admin/category/",
+                // element: <ListCategory />,
+              },
+              {
+                path: "/admin/category/create",
+                // element: <CreateCategory />,
+              },
+            ],
+          },
+          {
+            path: "/admin/product",
+            // element: <Product />,
+            children: [
+              {
+                path: "/admin/product/",
+                // element: <ListProduct />,
+              },
+              {
+                path: "/admin/product/create",
+                // element: <CreateProduct />,
+              },
+            ],
+          },
+          {
+            path: "/admin/topping",
+            // element: <Topping />,
+            children: [
+              {
+                path: "/admin/topping/",
+                // element: <ListTopping />,
+              },
+              {
+                path: "/admin/topping/create",
+                // element: <CreateTopping />,
+              },
+            ],
+          },
+          {
+            path: "/admin/orders",
+            // element: <Orders />,
+            children: [
+              {
+                path: "/admin/orders/",
+                // element: <ListOrders />,
+              },
+            ],
+          },
+        ],
       },
     ],
   },

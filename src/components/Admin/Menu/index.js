@@ -16,7 +16,7 @@ function MenuSider() {
   const items = [
     {
       key: "DashBoard",
-      label: "DashBoard",
+      label: <Link to="/admin/">DashBoard</Link>,
       icons: <DashboardOutlined />,
     },
     {
