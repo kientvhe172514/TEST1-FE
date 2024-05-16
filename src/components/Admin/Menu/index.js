@@ -41,11 +41,11 @@ function MenuSider() {
       children: [
         {
           key: "manager/listStore",
-          label: <Link to="manager/">List Store's Manager</Link>,
+          label: <Link to="manager-store/">List Store's Manager</Link>,
         },
         {
           key: "manager/create",
-          label: <Link to="manager/create">Create Store's Manager</Link>,
+          label: <Link to="manager-store/create">Create Store's Manager</Link>,
         },
       ],
     },
@@ -56,7 +56,7 @@ function MenuSider() {
       children: [
         {
           key: "table/listStore",
-          label: <Link to="manager/">List Table</Link>,
+          label: <Link to="table/">List Table</Link>,
         },
         {
           key: "table/create",
