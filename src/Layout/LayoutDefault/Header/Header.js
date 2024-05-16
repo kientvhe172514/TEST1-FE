@@ -1,83 +1,118 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Header() {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <>
-      {/* <!-- Begin Main Header Area --> */}
-      <header className="main-header-area">
-        {/* ============== HEADER ============== */}
-        <div className="header-top bg-pronia-primary d-none d-lg-block">
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-6">
-                <div className="header-top-left">
-                  <span className="pronia-offer">
-                    HELLO EVERYONE! 25% Off All Products
-                  </span>
+ <div className={`header-top bg-pronia-primary ${!isMenuOpen ? 'd-none d-lg-block' : ''}`}>
+  <div className="container">
+    <div className="row align-items-center">
+      <div className="col-6">
+        <div className="header-top-left">
+          <span className="pronia-offer">
+            HELLO EVERYONE! 25% Off All Products
+          </span>
+        </div>
+      </div>
+      <div className="col-6">
+        <div className="header-top-right">
+          <ul className="dropdown-wrap">
+            <li className="dropdown">
+              <button
+                className="btn btn-link dropdown-toggle ht-btn"
+                type="button"
+                id="currencyButton"
+                data-bs-toggle="dropdown"
+                aria-label="currency"
+                aria-expanded="false"
+              >
+                USD
+              </button>
+              <ul className="dropdown-menu" aria-labelledby="currencyButton">
+                <li>
+                  <a className="dropdown-item" href="#">
+                    GBP
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    ISO
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li className="dropdown">
+              <button
+                className="btn btn-link dropdown-toggle ht-btn"
+                type="button"
+                id="languageButton"
+                data-bs-toggle="dropdown"
+                aria-label="language"
+                aria-expanded="false"
+              >
+                English
+              </button>
+              <ul className="dropdown-menu" aria-labelledby="languageButton">
+                <li>
+                  <a className="dropdown-item" href="#">
+                    French
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Italian
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Spanish
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      {/* Header Middle */}
+      <div className="header-middle py-30">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-12">
+              <div className="header-middle-wrap position-relative">
+                <div className="header-contact d-none d-lg-flex">
+                  <i className="pe-7s-call"></i>
+                  <a href="tel://+00-123-456-789">09XXXXXXXX</a>
                 </div>
-              </div>
-              <div className="col-6">
-                <div className="header-top-right">
-                  <ul className="dropdown-wrap">
-                    <li className="dropdown">
-                      <button
-                        className="btn btn-link dropdown-toggle ht-btn"
-                        type="button"
-                        id="currencyButton"
-                        data-bs-toggle="dropdown"
-                        aria-label="currency"
-                        aria-expanded="false"
-                      >
-                        USD
-                      </button>
-                      <ul
-                        className="dropdown-menu"
-                        aria-labelledby="currencyButton"
-                      >
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            GBP
-                          </a>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            ISO
-                          </a>
-                        </li>
-                      </ul>
+
+                <Link to="/">
+                  <img src="assets/images/logo/dark.png" alt="Header Logo" />
+                </Link>
+
+                <div className="header-right">
+                  <ul>
+                    <li>search</li>
+
+                    <li className="minicart-wrap me-3 me-lg-0">
+                      <Link to="/cart" className="minicart-btn toolbar-btn">
+                        <i className="pe-7s-shopbag"></i>
+                        <span className="quantity">3</span>
+                      </Link>
                     </li>
-                    <li className="dropdown">
-                      <button
-                        className="btn btn-link dropdown-toggle ht-btn"
-                        type="button"
-                        id="languageButton"
-                        data-bs-toggle="dropdown"
-                        aria-label="language"
-                        aria-expanded="false"
-                      >
-                        English
-                      </button>
-                      <ul
-                        className="dropdown-menu"
-                        aria-labelledby="languageButton"
-                      >
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            French
-                          </a>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            Italian
-                          </a>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            Spanish
-                          </a>
-                        </li>
-                      </ul>
+
+                    {/* Mobile Menu */}
+                    <li className="mobile-menu_wrap d-block d-lg-none">
+                      <i className="pe-7s-menu" onClick={toggleMenu}></i>
                     </li>
                   </ul>
                 </div>
@@ -85,55 +120,13 @@ function Header() {
             </div>
           </div>
         </div>
-        {/* ============== HEADER ============== */}
+      </div>
 
-        {/* ============== Header + logo + search ============== */}
-        <div className="header-middle py-30">
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-lg-12">
-                <div className="header-middle-wrap position-relative">
-                  <div className="header-contact d-none d-lg-flex">
-                    <i className="pe-7s-call"></i>
-                    <a href="tel://+00-123-456-789">09XXXXXXXX</a>
-                  </div>
-
-                  {/* ========= LOGO =========== */}
-                  <Link to="/">
-                    <img src="assets/images/logo/dark.png" alt="Header Logo" />
-                  </Link>
-
-                  <div className="header-right">
-                    <ul>
-                      <li>search</li>
-
-                      <li className="minicart-wrap me-3 me-lg-0">
-                        <Link to="/cart" className="minicart-btn toolbar-btn">
-                          <i className="pe-7s-shopbag"></i>
-                          <span className="quantity">3</span>
-                        </Link>
-                      </li>
-
-                      {/* ======= MOBILE =====  */}
-                      <li className="mobile-menu_wrap d-block d-lg-none">
-                        <a
-                          href="#mobileMenu"
-                          className="mobile-menu_btn toolbar-btn pl-0"
-                        >
-                          <i className="pe-7s-menu"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* ============== Header + logo + search ============== */}
-
-        {/* ============== NAV ============== */}
-        <div className="header-bottom d-none d-lg-block">
+      {/* Mobile Menu Dropdown */}
+      {isMenuOpen && (
+        
+        
+        <div className="header-bottom d-block d-lg-none">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
@@ -145,101 +138,6 @@ function Header() {
                       </li>
                       <li className="megamenu-holder">
                         <Link to="/listProduct">Shop</Link>
-                        {/* <ul className="drop-menu megamenu">
-                          <li>
-                            <span className="title">Shop Layout</span>
-                            <ul>
-                              <li>
-                                <a href="shop.html">Shop Default</a>
-                              </li>
-                              <li>
-                                <a href="shop-grid-fullwidth.html">
-                                  Shop Grid Fullwidth
-                                </a>
-                              </li>
-                              <li>
-                                <a href="shop-right-sidebar.html">
-                                  Shop Right Sidebar
-                                </a>
-                              </li>
-                              <li>
-                                <a href="shop-list-fullwidth.html">
-                                  Shop List Fullwidth
-                                </a>
-                              </li>
-                              <li>
-                                <a href="shop-list-left-sidebar.html">
-                                  Shop List Left Sidebar
-                                </a>
-                              </li>
-                              <li>
-                                <a href="shop-list-right-sidebar.html">
-                                  Shop List Right Sidebar
-                                </a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span className="title">Product Style</span>
-                            <ul>
-                              <li>
-                                <a href="single-product-variable.html">
-                                  Single Product Variable
-                                </a>
-                              </li>
-                              <li>
-                                <a href="single-product-group.html">
-                                  Single Product Group
-                                </a>
-                              </li>
-                              <li>
-                                <a href="single-product.html">
-                                  Single Product Default
-                                </a>
-                              </li>
-                              <li>
-                                <a href="single-product-affiliate.html">
-                                  Single Product Affiliate
-                                </a>
-                              </li>
-                              <li>
-                                <a href="single-product-sale.html">
-                                  Single Product Sale
-                                </a>
-                              </li>
-                              <li>
-                                <a href="single-product-sticky.html">
-                                  Single Product Sticky
-                                </a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <span className="title">Product Related</span>
-                            <ul>
-                              <li>
-                                <a href="my-account.html">My Account</a>
-                              </li>
-                              <li>
-                                <a href="login-register.html">
-                                  Login | Register
-                                </a>
-                              </li>
-                              <li>
-                                <a href="cart.html">Shopping Cart</a>
-                              </li>
-                              <li>
-                                <a href="wishlist.html">Wishlist</a>
-                              </li>
-                              <li>
-                                <a href="compare.html">Compare</a>
-                              </li>
-                              <li>
-                                <a href="checkout.html">Checkout</a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul> */}
                       </li>
                       <li>
                         <Link to="/about">About Us</Link>
@@ -254,6 +152,46 @@ function Header() {
             </div>
           </div>
         </div>
+
+        
+      )}
+
+      {/* Main Header Area */}
+      <header className="main-header-area">
+        <div className="header-bottom d-none d-lg-block">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="main-menu position-relative">
+                  <nav className="main-nav">
+                    <ul>
+                      <li className="drop-holder">
+                        <Link to="/">Home</Link>
+                      </li>
+                      <li className="megamenu-holder">
+                        <Link to="/listProduct">Shop</Link>
+                      </li>
+                      <li>
+                        <Link to="/about">About Us</Link>
+                      </li>
+                      <li className="drop-holder">
+                        <Link to="/contact">Contact</Link>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+
+
+
+      {/* <!-- Begin Main Header Area --> */}
+      <header className="main-header-area">
+       
         {/* ============== NAV ============== */}
 
         {/* ================== NAV AFTER SCROLL =============== */}

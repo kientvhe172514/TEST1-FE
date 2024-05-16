@@ -1761,6 +1761,23 @@ blockquote p {
   margin-right: 15px;
   font-size: 25px;
 }
+.header-bottom d-block d-lg-none{
+  /* display: none; */
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-lg-none {
+  display: none !important;
+}
+
+@media (max-width: 992px) {
+  .d-lg-none {
+    display: block !important;
+  }
+}
 
 /* ---Header Bottom--- */
 .header-bottom {
