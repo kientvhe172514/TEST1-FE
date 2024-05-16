@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "../../../components/Product/Product"
+import Product from "../../../components/Client/Product/Product"
 
 function ListProduct() {
   return (

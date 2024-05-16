@@ -1,5 +1,5 @@
 import './App.css';
-import AllRoute from './components/AllRoutes/AllRoute';
+import AllRoute from './components/Client/AllRoutes/AllRoute';
 import './assets/css/animate.min.css'
 import './assets/css/bootstrap.min.css'
 import './assets/css/font-awesome.min.css'
