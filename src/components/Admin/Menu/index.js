@@ -16,8 +16,14 @@ function MenuSider() {
   const items = [
     {
       key: "DashBoard",
-      label: <Link to="/admin/">DashBoard</Link>,
-      icons: <DashboardOutlined />,
+      icon: <DashboardOutlined />,
+      label: "DashBoard",
+      children: [
+        {
+          key: "DashBoard1",
+          label: <Link to="/admin/">DashBoard All</Link>,
+        },
+      ],
     },
     {
       key: "Store",
@@ -141,7 +147,7 @@ function MenuSider() {
       <Menu
         mode="inline"
         items={items}
-        defaultOpenKeys={["Menu 1"]}
+        defaultOpenKeys={["DashBoard1"]}
         defaultSelectedKeys={["/"]}
       />
     </>
