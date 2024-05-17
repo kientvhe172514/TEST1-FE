@@ -14,6 +14,15 @@ import ListStoreManager from '../pages/Admin/ManagerStore/ListStoreManager'
 import CreateStoreManager from '../pages/Admin/ManagerStore/CreateStoreManager'
 import ListTable from '../pages/Admin/Table/ListTable'
 import CreateTable from '../pages/Admin/Table/CreateTable'
+import ListEmployee from '../pages/Admin/Employee/ListEmployee'
+import CreateEmployee from '../pages/Admin/Employee/CreateEmployee'
+import ListCategory from '../pages/Admin/Category/ListCategory'
+import CreateCategory from '../pages/Admin/Category/CreateCategory'
+import ListProductAdmin from '../pages/Admin/Product/ListProductAdmin'
+import CreateProduct from '../pages/Admin/Product/CreateProduct'
+import ListTopping from '../pages/Admin/Topping/ListTopping'
+import CreateTopping from '../pages/Admin/Topping/CreateTopping'
+import ListOrders from '../pages/Admin/Orders/ListOrders'
 
 
 const routes = [
@@ -102,25 +111,24 @@ const routes = [
             children: [
               {
                 path: "/admin/employee/",
-                // element: <ListEmployee />,
+                element: <ListEmployee />,
               },
               {
                 path: "/admin/employee/create",
-                // element: <CreateEmployee />,
+                element: <CreateEmployee />,
               },
             ],
           },
           {
             path: "/admin/category",
-            // element: <Category />,
             children: [
               {
                 path: "/admin/category/",
-                // element: <ListCategory />,
+                element: <ListCategory />,
               },
               {
                 path: "/admin/category/create",
-                // element: <CreateCategory />,
+                element: <CreateCategory />,
               },
             ],
           },
@@ -129,11 +137,11 @@ const routes = [
             children: [
               {
                 path: "/admin/product/",
-                // element: <ListProduct />,
+                element: <ListProductAdmin />,
               },
               {
                 path: "/admin/product/create",
-                // element: <CreateProduct />,
+                element: <CreateProduct />,
               },
             ],
           },
@@ -142,21 +150,20 @@ const routes = [
             children: [
               {
                 path: "/admin/topping/",
-                // element: <ListTopping />,
+                element: <ListTopping />,
               },
               {
                 path: "/admin/topping/create",
-                // element: <CreateTopping />,
+                element: <CreateTopping />,
               },
             ],
           },
           {
             path: "/admin/orders",
-            // element: <Orders />,
             children: [
               {
                 path: "/admin/orders/",
-                // element: <ListOrders />,
+                element: <ListOrders />,
               },
             ],
           },
