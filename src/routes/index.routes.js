@@ -103,11 +103,11 @@ const routes = [
             children: [
               {
                 path: "/admin/employee/",
-                // element: <ListEmployee />,
+                element: <ListEmployee />,
               },
               {
                 path: "/admin/employee/create",
-                // element: <CreateEmployee />,
+                element: <CreateEmployee />,
               },
             ],
           },
@@ -117,9 +117,11 @@ const routes = [
               {
                 path: "/admin/category/",
                 element: <ListCategory />,
+                element: <ListCategory />,
               },
               {
                 path: "/admin/category/create",
+                element: <CreateCategory />,
                 element: <CreateCategory />,
               },
             ],
@@ -129,11 +131,11 @@ const routes = [
             children: [
               {
                 path: "/admin/product/",
-                // element: <ListProduct />,
+                element: <ListProductAdmin />,
               },
               {
                 path: "/admin/product/create",
-                // element: <CreateProduct />,
+                element: <CreateProduct />,
               },
             ],
           },
@@ -142,21 +144,20 @@ const routes = [
             children: [
               {
                 path: "/admin/topping/",
-                // element: <ListTopping />,
+                element: <ListTopping />,
               },
               {
                 path: "/admin/topping/create",
-                // element: <CreateTopping />,
+                element: <CreateTopping />,
               },
             ],
           },
           {
             path: "/admin/orders",
-            // element: <Orders />,
             children: [
               {
                 path: "/admin/orders/",
-                // element: <ListOrders />,
+                element: <ListOrders />,
               },
             ],
           },

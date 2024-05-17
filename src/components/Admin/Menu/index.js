@@ -35,7 +35,7 @@ function MenuSider() {
           label: <Link to="store/">List Store</Link>,
         },
         {
-          key: "store/listStore",
+          key: "store/create",
           label: <Link to="store/create">Create Store</Link>,
         },
       ],
@@ -95,7 +95,7 @@ function MenuSider() {
           label: <Link to="category/">List Category</Link>,
         },
         {
-          key: "category/categories",
+          key: "category/create",
           label: <Link to="category/create">Create Category</Link>,
         },
       ],
@@ -107,11 +107,11 @@ function MenuSider() {
       children: [
         {
           key: "product/products",
-          label: <Link to="product/">List Category</Link>,
+          label: <Link to="product/">List Product</Link>,
         },
         {
           key: "product/create",
-          label: <Link to="product/create">Create Category</Link>,
+          label: <Link to="product/create">Create Product</Link>,
         },
       ],
     },
