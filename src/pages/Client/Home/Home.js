@@ -1,5 +1,5 @@
-import OurProducts from "../../../components/Product/OurProducts";
-import NewProduct from "../../../components/Product/NewProduct";
+import OurProducts from "../../../components/Client/Product/OurProducts";
+import NewProduct from "../../../components/Client/Product/NewProduct";
 function Home() {
   return (
     <>
