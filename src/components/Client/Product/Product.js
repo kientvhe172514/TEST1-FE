@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Product() {
   return (
@@ -6,18 +7,18 @@ function Product() {
       <div class="col-xl-3 col-md-4 col-sm-6 pt-4">
         <div class="product-item">
           <div class="product-img">
-            <a href="shop.html">
+            <Link to="/productDetail">
               <img
                 class="primary-img"
                 src="assets/images/product/medium-size/1-8-270x300.jpg"
                 alt="Product Images"
               />
-              <img
+              {/* <img
                 class="secondary-img"
                 src="assets/images/product/medium-size/1-1-270x300.jpg"
                 alt="Product Images"
-              />
-            </a>
+              /> */}
+            </Link>
             <div class="product-add-action">
               <ul>
                 <li>
