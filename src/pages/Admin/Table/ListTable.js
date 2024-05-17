@@ -45,47 +45,49 @@ function ListTable() {
   const toggleStatus = (id) => {
     setTables(prevTables =>
       prevTables.map(table =>
-        table.id === id? { ...table, status: table.status === 'available' ? 'full' : 'available' }
+        table.id === id ? { ...table, status: table.status === 'available' ? 'full' : 'available' }
           : table
       )
     );
   };
-   const resetAllTables = () =>{
-    setTables(prevTables => prevTables.map(tables =>({
+  const resetAllTables = () => {
+    setTables(prevTables => prevTables.map(tables => ({
       ...tables, status: "available"
     })))
-   }
+  }
 
   return (
+
+
     <>
       <h1>List table</h1>
-      <Button onClick={resetAllTables } type="primary">
+      <Button onClick={resetAllTables} type="primary">
         Reset
       </Button>
       {Array.from({ length: 4 }, (_, rowIndex) => (
-       <Row gutter={[20, 20]} key={rowIndex}>
-       {tables
-         .slice(rowIndex * 4, rowIndex * 4 + 4)
-         .map((table) => (
-           <Col key={table.id} xxl={6} xl={6} lg={6} md={12} sm={24}>
-             <div className='table-item'>
-               <div className="status-container">
-                 Bàn {table.id}:
-                 <span className={`status ${table.status}`}>
-                   {table.status === 'available' ? 'Còn trống' : 'Đã full'}
-                 </span>
-               </div>
-               <Button onClick={() => toggleStatus(table.id)} className="status-button">
-                 {table.status === 'available' ? 'Chuyển thành Đã full' : 'Chuyển thành Còn trống'}
-               </Button>
-             </div>
-           </Col>
-         ))}
-     </Row>
-     
+        <Row gutter={[20, 20]} key={rowIndex}>
+          {tables
+            .slice(rowIndex * 4, rowIndex * 4 + 4)
+            .map((table) => (
+              <Col key={table.id} xxl={6} xl={6} lg={6} md={12} sm={24}>
+                <div className='table-item'>
+                  <div className="status-container">
+                    Bàn {table.id}:
+                    <span className={`status ${table.status}`}>
+                      {table.status === 'available' ? 'Còn trống' : 'Đã full'}
+                    </span>
+                  </div>
+                  <Button onClick={() => toggleStatus(table.id)} className="status-button">
+                    {table.status === 'available' ? 'Chuyển thành Đã full' : 'Chuyển thành Còn trống'}
+                  </Button>
+                </div>
+              </Col>
+            ))}
+        </Row>
       ))}
     </>
   );
+
 
 }
 

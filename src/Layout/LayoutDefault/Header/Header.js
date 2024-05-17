@@ -101,6 +101,7 @@ function Header() {
 
                 <div className="header-right">
                   <ul>
+                    <input/>
                     <li>search</li>
 
                     <li className="minicart-wrap me-3 me-lg-0">
