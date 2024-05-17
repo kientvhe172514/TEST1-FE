@@ -53,7 +53,7 @@ function ListProduct() {
                   role="tabpanel"
                   aria-labelledby="grid-view-tab"
                 >
-                  <div class="product-grid-view row g-y-20">
+                  <div class="product-grid-view row g-y-1">
                     {/* ================ product =================== */}
                       {/* PRODUCT CONTENT */}
                       <div class="product-item">
@@ -151,7 +151,7 @@ function ListProduct() {
                       </div>
                       <Product/>
                       <Product/>
-                    {/* ================ product =================== */}
+                    {/* ================ product-content =================== */}
                   </div>
                 </div>
               </div>
