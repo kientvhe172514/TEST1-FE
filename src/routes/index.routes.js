@@ -14,7 +14,8 @@ import ListStoreManager from '../pages/Admin/ManagerStore/ListStoreManager'
 import CreateStoreManager from '../pages/Admin/ManagerStore/CreateStoreManager'
 import ListTable from '../pages/Admin/Table/ListTable'
 import CreateTable from '../pages/Admin/Table/CreateTable'
-
+import CreateCategory from "../pages/Admin/Category/CreateCategory";
+import ListCategory from "../pages/Admin/Category/ListCategory";
 
 const routes = [
   {
@@ -111,16 +112,15 @@ const routes = [
             ],
           },
           {
-            path: "/admin/category",
-            // element: <Category />,
+            path: "/admin/category",            
             children: [
               {
                 path: "/admin/category/",
-                // element: <ListCategory />,
+                element: <ListCategory />,
               },
               {
                 path: "/admin/category/create",
-                // element: <CreateCategory />,
+                element: <CreateCategory />,
               },
             ],
           },
