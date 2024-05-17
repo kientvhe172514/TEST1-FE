@@ -102,7 +102,7 @@ function Header() {
                 <div className="header-right">
                   <ul>
                     <li>search</li>
-
+                    
                     <li className="minicart-wrap me-3 me-lg-0">
                       <Link to="/cart" className="minicart-btn toolbar-btn">
                         <i className="pe-7s-shopbag"></i>

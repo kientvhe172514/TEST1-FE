@@ -76,12 +76,12 @@ function MenuSider() {
       icon: <UserOutlined />,
       children: [
         {
-          key: "employee/employees",
+          key: "employee/employee",
           label: <Link to="employee/">List Employee</Link>,
         },
         {
           key: "employee/create",
-          label: <Link to="pmployee/create">Create Employee</Link>,
+          label: <Link to="employee/create">Create Employee</Link>,
         },
       ],
     },
@@ -121,12 +121,12 @@ function MenuSider() {
       icon: <HeatMapOutlined />,
       children: [
         {
-          key: "toping/",
-          label: <Link to="toping/">List Toping</Link>,
+          key: "topping/",
+          label: <Link to="topping/">List Toping</Link>,
         },
         {
-          key: "toping/create",
-          label: <Link to="toping/create">Create Toping</Link>,
+          key: "topping/create",
+          label: <Link to="topping/create">Create Toping</Link>,
         },
       ],
     },
@@ -138,6 +138,10 @@ function MenuSider() {
         {
           key: "orders/",
           label: <Link to="orders/">List orders</Link>,
+        },
+        {
+          key: "orders/Orderdetail",
+          label: <Link to="orders/orderdetails">Orders detail</Link>,
         },
       ],
     },

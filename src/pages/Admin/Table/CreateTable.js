@@ -20,7 +20,7 @@ const handleSubmit = async (values) => {
 
 return (
     <>
-        <h2>Thêm table mới</h2>
+        <h2>Create table</h2>
 
         <Form
             name="create-table"

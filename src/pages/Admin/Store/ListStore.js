@@ -5,6 +5,12 @@ function ListStore() {
   // lấy qua API
   const columns = [
     {
+      title: "StoreID",
+      dataIndex: "id",
+      key: "id",
+      render: (text) => <a>{text}</a>, // custom text
+    },
+    {
       title: "Store Name",
       dataIndex: "name",
       key: "name",
