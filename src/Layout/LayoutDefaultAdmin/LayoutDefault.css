@@ -30,7 +30,7 @@
 .content{
     padding: 20px;
     width: 100%;
-    height: clamp(200px, 500px, 700px);
+    /* height: clamp(200px, 500px, 700px); */
 }
 .header__collapse{
     margin-right: 20px;

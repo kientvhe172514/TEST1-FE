@@ -2,17 +2,16 @@ import { useState } from "react";
 import { Layout } from "antd";
 
 import "./LayoutDefault.css";
-// import logo_fold from "../../Images/logo-fold.png";
 import logo from "../../assets/images/logo/dark.png";
 import {
   SearchOutlined,
   MenuUnfoldOutlined,
   MenuFoldOutlined,
 } from "@ant-design/icons";
-// import Notify from "../../component/Notify";
 import MenuSider from "../../components/Admin/Menu/index";
 import { Outlet } from "react-router-dom";
 import { Footer } from "antd/es/layout/layout";
+import Notify from "../../components/Admin/Notify";
 
 const { Sider, Content } = Layout;
 
@@ -43,10 +42,14 @@ function LayoutDefaultAdmin() {
                 {/* <MenuFoldOutlined /> */}
               </div>
 
-              <div className="header__search">{/* <SearchOutlined /> */}</div>
+              <div className="header__search">
+                <SearchOutlined />
+              </div>
             </div>
 
-            <div className="header__nav-right">{/* <Notify /> */}</div>
+            <div className="header__nav-right">
+              <Notify />
+            </div>
           </div>
         </header>
 
