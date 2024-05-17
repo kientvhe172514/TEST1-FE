@@ -1,10 +1,11 @@
-import React from 'react'
-
 function ListProductAdmin() {
+
+
   return (
-    <div>ListProductAdmin</div>
-  )
+    <>
+  ListProductAdmin
+    </>
+  );
 }
 
-
-export default ListProductAdmin
+export default ListProductAdmin;
