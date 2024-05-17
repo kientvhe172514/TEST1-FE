@@ -16,7 +16,13 @@ import ListTable from '../pages/Admin/Table/ListTable'
 import CreateTable from '../pages/Admin/Table/CreateTable'
 import CreateCategory from "../pages/Admin/Category/CreateCategory";
 import ListCategory from "../pages/Admin/Category/ListCategory";
-
+import ListProductAdmin from "../pages/Admin/Product/ListProductAdmin";
+import CreateProduct from "../pages/Admin/Product/CreateProduct";
+import ListOrders from "../pages/Admin/Orders/ListOrders";
+import CreateEmployee from "../pages/Admin/Employee/CreateEmployee";
+import ListEmployee from "../pages/Admin/Employee/ListEmployee";
+import CreateTopping from "../pages/Admin/Topping/CreateTopping";
+import ListTopping from "../pages/Admin/Topping/ListTopping";
 const routes = [
   {
     path: "/",
@@ -117,12 +123,12 @@ const routes = [
               {
                 path: "/admin/category/",
                 element: <ListCategory />,
-                element: <ListCategory />,
+                
               },
               {
                 path: "/admin/category/create",
                 element: <CreateCategory />,
-                element: <CreateCategory />,
+                
               },
             ],
           },
