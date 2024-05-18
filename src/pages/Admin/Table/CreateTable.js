@@ -5,7 +5,7 @@ function CreateTable() {
 
 
 
-    <div>CreateTable</div>
+    // <div>CreateTable</div>
 
     const [form] = Form.useForm();
 
@@ -17,7 +17,7 @@ function CreateTable() {
         //     form.resetFields();
         // }
     };
-
+    <h2>Create table</h2>
 
     return (
         <>

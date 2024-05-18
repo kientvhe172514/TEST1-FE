@@ -76,11 +76,12 @@ function MenuSider() {
       icon: <UserOutlined />,
       children: [
         {
-          key: "employee/employees",
+          key: "employee/employee",
           label: <Link to="employee/">List Employee</Link>,
         },
         {
           key: "employee/create",
+          label: <Link to="employee/create">Create Employee</Link>,
           label: <Link to="employee/create">Create Employee</Link>,
         },
       ],
@@ -138,6 +139,10 @@ function MenuSider() {
         {
           key: "orders/",
           label: <Link to="orders/">List orders</Link>,
+        },
+        {
+          key: "orders/Orderdetail",
+          label: <Link to="orders/orderdetails">Orders detail</Link>,
         },
       ],
     },

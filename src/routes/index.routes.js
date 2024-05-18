@@ -14,17 +14,16 @@ import ListStoreManager from '../pages/Admin/ManagerStore/ListStoreManager'
 import CreateStoreManager from '../pages/Admin/ManagerStore/CreateStoreManager'
 import ListTable from '../pages/Admin/Table/ListTable'
 import CreateTable from '../pages/Admin/Table/CreateTable'
-import ListEmployee from '../pages/Admin/Employee/ListEmployee'
-import CreateEmployee from '../pages/Admin/Employee/CreateEmployee'
-import ListCategory from '../pages/Admin/Category/ListCategory'
-import CreateCategory from '../pages/Admin/Category/CreateCategory'
-import ListProductAdmin from '../pages/Admin/Product/ListProductAdmin'
-import CreateProduct from '../pages/Admin/Product/CreateProduct'
-import ListTopping from '../pages/Admin/Topping/ListTopping'
-import CreateTopping from '../pages/Admin/Topping/CreateTopping'
-import ListOrders from '../pages/Admin/Orders/ListOrders'
-
-
+import CreateCategory from "../pages/Admin/Category/CreateCategory";
+import ListCategory from "../pages/Admin/Category/ListCategory";
+import ListProductAdmin from "../pages/Admin/Product/ListProductAdmin";
+import CreateProduct from "../pages/Admin/Product/CreateProduct";
+import ListOrders from "../pages/Admin/Orders/ListOrders";
+import CreateEmployee from "../pages/Admin/Employee/CreateEmployee";
+import ListEmployee from "../pages/Admin/Employee/ListEmployee";
+import CreateTopping from "../pages/Admin/Topping/CreateTopping";
+import ListTopping from "../pages/Admin/Topping/ListTopping";
+import OrderDetails from "../pages/Admin/Orders/OrderDetails";
 const routes = [
   {
     path: "/",
@@ -120,15 +119,17 @@ const routes = [
             ],
           },
           {
-            path: "/admin/category",
+            path: "/admin/category",            
             children: [
               {
                 path: "/admin/category/",
                 element: <ListCategory />,
+                
               },
               {
                 path: "/admin/category/create",
                 element: <CreateCategory />,
+                
               },
             ],
           },
@@ -164,6 +165,10 @@ const routes = [
               {
                 path: "/admin/orders/",
                 element: <ListOrders />,
+              },
+              {
+                path: "/admin/orders/orderdetails/",
+                element: <OrderDetails />,
               },
             ],
           },
