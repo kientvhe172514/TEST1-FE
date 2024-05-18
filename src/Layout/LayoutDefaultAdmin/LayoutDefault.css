@@ -27,6 +27,34 @@
     align-items: center;
     font-size: 20px;
  }
+ .header__search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__search input {
+    flex: 1; /* Chiếm không gian còn lại */
+    padding: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .header__search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007BFF; /* Màu nền cho nút */
+    color: white; /* Màu chữ/icon */
+    cursor: pointer;
+    margin-left: 8px; /* Khoảng cách giữa input và button */
+  }
+  
+  .header__search button .search-icon {
+    font-size: 16px; /* Kích thước icon */
+  }
+  
 .content{
     padding: 20px;
     width: 100%;

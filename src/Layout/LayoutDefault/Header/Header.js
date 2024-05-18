@@ -1,6 +1,12 @@
+import { Input } from "antd";
+import {
+  SearchOutlined,
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+} from "@ant-design/icons";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+const { Search } = Input;
 function Header() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,80 +14,85 @@ function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const onSearch = (value, event) => {
+    console.log(event?.nativeEvent?.type, value);
+    // Do something with the search value
+  };
+
   return (
     <>
- <div className={`header-top bg-pronia-primary ${!isMenuOpen ? 'd-none d-lg-block' : ''}`}>
-  <div className="container">
-    <div className="row align-items-center">
-      <div className="col-6">
-        <div className="header-top-left">
-          <span className="pronia-offer">
-            HELLO EVERYONE! 25% Off All Products
-          </span>
+      <div className={`header-top bg-pronia-primary ${!isMenuOpen ? 'd-none d-lg-block' : ''}`}>
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-6">
+              <div className="header-top-left">
+                <span className="pronia-offer">
+                  HELLO EVERYONE! 25% Off All Products
+                </span>
+              </div>
+            </div>
+            <div className="col-6">
+              <div className="header-top-right">
+                <ul className="dropdown-wrap">
+                  <li className="dropdown">
+                    <button
+                      className="btn btn-link dropdown-toggle ht-btn"
+                      type="button"
+                      id="currencyButton"
+                      data-bs-toggle="dropdown"
+                      aria-label="currency"
+                      aria-expanded="false"
+                    >
+                      USD
+                    </button>
+                    <ul className="dropdown-menu" aria-labelledby="currencyButton">
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          GBP
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          ISO
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="dropdown">
+                    <button
+                      className="btn btn-link dropdown-toggle ht-btn"
+                      type="button"
+                      id="languageButton"
+                      data-bs-toggle="dropdown"
+                      aria-label="language"
+                      aria-expanded="false"
+                    >
+                      English
+                    </button>
+                    <ul className="dropdown-menu" aria-labelledby="languageButton">
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          French
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Italian
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Spanish
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="col-6">
-        <div className="header-top-right">
-          <ul className="dropdown-wrap">
-            <li className="dropdown">
-              <button
-                className="btn btn-link dropdown-toggle ht-btn"
-                type="button"
-                id="currencyButton"
-                data-bs-toggle="dropdown"
-                aria-label="currency"
-                aria-expanded="false"
-              >
-                USD
-              </button>
-              <ul className="dropdown-menu" aria-labelledby="currencyButton">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    GBP
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    ISO
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className="dropdown">
-              <button
-                className="btn btn-link dropdown-toggle ht-btn"
-                type="button"
-                id="languageButton"
-                data-bs-toggle="dropdown"
-                aria-label="language"
-                aria-expanded="false"
-              >
-                English
-              </button>
-              <ul className="dropdown-menu" aria-labelledby="languageButton">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    French
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Italian
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Spanish
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
       {/* Header Middle */}
@@ -101,9 +112,15 @@ function Header() {
 
                 <div className="header-right">
                   <ul>
-                    <input/>
-                    <li>search</li>
-                    
+                    <div className="header__search">
+
+                      <Search
+                        placeholder="Input search text"
+                        enterButton
+                        onSearch={value => onSearch(value, 'click')}
+                      />
+
+                    </div>
                     <li className="minicart-wrap me-3 me-lg-0">
                       <Link to="/cart" className="minicart-btn toolbar-btn">
                         <i className="pe-7s-shopbag"></i>
@@ -125,8 +142,8 @@ function Header() {
 
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        
-        
+
+
         <div className="header-bottom d-block d-lg-none">
           <div className="container">
             <div className="row">
@@ -154,7 +171,7 @@ function Header() {
           </div>
         </div>
 
-        
+
       )}
 
       {/* Main Header Area */}
@@ -186,13 +203,13 @@ function Header() {
           </div>
         </div>
       </header>
-    
+
 
 
 
       {/* <!-- Begin Main Header Area --> */}
       <header className="main-header-area">
-       
+
         {/* ============== NAV ============== */}
 
         {/* ================== NAV AFTER SCROLL =============== */}

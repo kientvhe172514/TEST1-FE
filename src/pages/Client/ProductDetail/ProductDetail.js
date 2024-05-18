@@ -1,7 +1,21 @@
+import { Radio } from 'antd'
 import React from 'react'
-
+import { Button, Form, Input, InputNumber, Select, Space, Switch } from "antd";
+import "./ProductDetail.css"
+import { Option } from 'antd/es/mentions';
 function ProductDetail() {
+  const [form] = Form.useForm();
+
+  const handleSubmit = async (values) => {
+    console.log(values)
+    // const response = await createRoom(values);
+    // console.log(response);
+    // if (response) {
+    //     form.resetFields();
+    // }
+  };
   return (
+
     <>
       <main class="main-content">
         <div class="breadcrumb-area breadcrumb-height" data-bg-image="assets/images/breadcrumb/bg/1-1-1919x388.jpg">
@@ -21,6 +35,7 @@ function ProductDetail() {
             </div>
           </div>
         </div>
+
         <div class="single-product-area section-space-top-100">
           <div class="container">
             <div class="row">
@@ -56,77 +71,109 @@ function ProductDetail() {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 pt-5 pt-lg-0">
-                <div class="single-product-content">
-                  <h2 class="title">American Marigold</h2>
-                  <div class="price-box">
-                    <span class="new-price">$23.45</span>
-                  </div>
-                  <div class="rating-box-wrap">
-                    <div class="rating-box">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="review-status">
-                      <a href="#">( 1 Review )</a>
-                    </div>
-                  </div>
-                 
-                  <div class="selector-wrap size-option">
-                    <span class="selector-title">Size</span>
-                    <select class="nice-select wide rounded-0">
-                      <option value="medium">Size M-20000</option>
-                      <option value="large">Size L-30000</option>
-                      <option value="small">Size XL-45000</option>
-                    </select>
-                  </div>
-                  
-                  <div class="note-input">
-                    <span class="note-label">Thêm ghi chú của bạn:</span>
-                    <input type="text" class="note-text" placeholder='VD: 50% đường 50% đá' />
-                  </div>
+              <Form
+                name="create-room"
+                onFinish={handleSubmit}
+                form={form}
+
+              >
 
 
-                  <div class="product-category">
-                    <span class="title">Categories :</span>
-                        Trà sữa
-                  </div>
-                  <p class="short-desc">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod
-                    tempo incid ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate</p>
-                  <ul class="quantity-with-btn">
-                    <li class="quantity">
-                      <div class="cart-plus-minus">
-                        <input class="cart-plus-minus-box" value="1" type="text" />
+                <div class="col-lg-6 pt-5 pt-lg-0">
+                  <div class="single-product-content">
+                    <h2 class="title">American Marigold</h2>
+                    <div class="price-box">
+                      <span class="new-price">$23.45</span>
+                    </div>
+                    <div class="rating-box-wrap">
+                      <div class="rating-box">
+                        <ul>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                          <li><i class="fa fa-star"></i></li>
+                        </ul>
                       </div>
-                    </li>
-                    <li class="add-to-cart">
-                      <a class="btn btn-custom-size lg-size btn-pronia-primary" href="cart.html">Add to
-                        cart</a>
-                    </li>
-                    <li class="wishlist-btn-wrap">
-                      <a class="custom-circle-btn" href="wishlist.html">
-                        <i class="pe-7s-like"></i>
-                      </a>
-                    </li>
-                    <li class="compare-btn-wrap">
-                      <a class="custom-circle-btn" href="compare.html">
-                        <i class="pe-7s-refresh-2"></i>
-                      </a>
-                    </li>
-                  </ul>
+                      <div class="review-status">
+                        <a href="#">( 1 Review )</a>
+                      </div>
+                    </div>
+                    <Form.Item
+                      name="Size"
+                      label="Size:"
+                      rules={[{ required: true, message: 'Please select the utilities!' }]}
+                    >
+                      <Select mode="multiple" allowClear placeholder="Select your utilities">
+                        <Option value={JSON.stringify({ name: 'Size M', price: 20000 })}>Size M-20000</Option>
+                        <Option value={JSON.stringify({ name: 'Size L', price: 30000 })}>Size L-30000</Option>
+                        <Option value={JSON.stringify({ name: 'Size XL', price: 45000 })}>Size XL-45000</Option>
+                      </Select>
 
+                      {/* <Select mode="multiple" allowClear placeholder="Select your utilities">
+                        <Option value="Size M">Size M-20000</Option>
+                        <Option value=" Size L"> Size L-30000</Option>
+                        <Option value="Size XL">Size XL-45000</Option>
+                      </Select> */}
+
+                    </Form.Item>
+
+                    <Form.Item
+                      name="Topping"
+                      label="Topping"
+                      rules={[{ required: true, message: 'Please select the utilities!' }]}
+                    >
+                      <Select mode="multiple" allowClear placeholder="Select your utilities">
+                        <Option value={JSON.stringify({ name: 'Thạch', price: 5000 })}>Thạch-5000</Option>
+                        <Option value={JSON.stringify({ name: 'Chân trâu', price: 5000 })}> Chân trâu-5000</Option>
+                        <Option value={JSON.stringify({ name: 'Pudding', price: 5000 })}>Pudding-5000</Option>
+                        <Option value={JSON.stringify({ name: 'Phô mai', price: 5000 })}>Phô mai-5000</Option>
+                      </Select>
+                    </Form.Item>
+
+                    <Form.Item
+                      label="Ghi chú"
+                      name="description"
+                    >
+                      <Input.TextArea rows={2} showCount maxLength={100} placeholder='Ví dụ: 50% đường'/>
+                    </Form.Item>
+
+
+                    <div class="product-category">
+                      <span class="title">Categories :</span>
+                      Trà sữa
+                    </div>
+                    <Form.Item
+                      label="Số Lượng"
+                      name="quantityOrder"
+                      rules={[
+                        {
+                          required: true,
+                          message: 'Please input the number of order!',
+                        },
+                      ]}
+                    >
+                      <InputNumber min={1} max={1000} />
+                    </Form.Item>
+
+                    <Form.Item>
+                      <Button type="primary" htmlType="submit">
+                        Add to cart
+                      </Button>
+                    </Form.Item>
+
+
+                    <p class="short-desc">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod
+                      tempo incid ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru
+                      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                      in reprehenderit in voluptate</p>
+                  </div>
                 </div>
-              </div>
+              </Form>
             </div>
           </div>
-        </div>
+        </div >
+
         {/* <div class="product-tab-area section-space-top-100">
           <div class="container">
             <div class="row">
@@ -466,7 +513,7 @@ function ProductDetail() {
         </div> */}
         {/* <!-- Product Area End Here --> */}
 
-      </main>
+      </main >
     </>
   )
 }

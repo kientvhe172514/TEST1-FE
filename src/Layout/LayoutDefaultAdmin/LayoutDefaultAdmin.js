@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Layout } from "antd";
+import { Form, Input, Layout } from "antd";
 
 import "./LayoutDefault.css";
 import logo from "../../assets/images/logo/dark.png";
@@ -12,12 +12,18 @@ import MenuSider from "../../components/Admin/Menu/index";
 import { Outlet } from "react-router-dom";
 import { Footer } from "antd/es/layout/layout";
 import Notify from "../../components/Admin/Notify";
+const { Search } = Input;
 
 const { Sider, Content } = Layout;
 
 function LayoutDefaultAdmin() {
   const [collapsed, setCollapsed] = useState(false);
   console.log(collapsed);
+
+  const onSearch = (value, event) => {
+    console.log(event?.nativeEvent?.type, value);
+    // Do something with the search value
+  };
   return (
     <>
       <Layout className="layout-default">
@@ -43,7 +49,13 @@ function LayoutDefaultAdmin() {
               </div>
 
               <div className="header__search">
-                <SearchOutlined />
+              
+                <Search
+                  placeholder="Input search text"
+                  enterButton
+                  onSearch={value => onSearch(value, 'click')}
+                />
+                
               </div>
             </div>
 
