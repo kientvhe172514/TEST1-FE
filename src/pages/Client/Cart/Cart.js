@@ -1,3 +1,4 @@
+import { color } from "chart.js/helpers";
 import React from "react";
 
 function Cart() {
@@ -14,7 +15,7 @@ function Cart() {
                     <h2 class="breadcrumb-heading">Cart Page</h2>
                     <ul>
                       <li>
-                        <a href="index.html">Home</a>
+                        <a href="/">Home</a>
                       </li>
                       <li>Cart Page</li>
                     </ul>
@@ -227,7 +228,10 @@ function Cart() {
                               Total <span>$79.35</span>
                             </li>
                           </ul>
-                          <a href="#">Proceed to checkout</a>
+                          {/* <a style="color: white;" href="#">Proceed to checkout</a> */}
+                          <a  href="#">
+                            <div style={{ color: "white" }}>checkout</div>
+                          </a>
                         </div>
                       </div>
                     </div>

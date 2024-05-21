@@ -24,6 +24,7 @@ import ListEmployee from "../pages/Admin/Employee/ListEmployee";
 import CreateTopping from "../pages/Admin/Topping/CreateTopping";
 import ListTopping from "../pages/Admin/Topping/ListTopping";
 import OrderDetails from "../pages/Admin/Orders/OrderDetails";
+import Login from "../pages/Admin/Login/Login";
 const routes = [
   {
     path: "/",
@@ -55,10 +56,15 @@ const routes = [
       },
     ],
   },
+  
   {
     path: "/admin",
     element: <LayoutDefaultAdmin />,
     children: [
+      {
+        path: "/admin/login",
+        element: <Login />
+      },
       {
         element: <PrivateRouter />,
         children: [
@@ -119,17 +125,17 @@ const routes = [
             ],
           },
           {
-            path: "/admin/category",            
+            path: "/admin/category",
             children: [
               {
                 path: "/admin/category/",
                 element: <ListCategory />,
-                
+
               },
               {
                 path: "/admin/category/create",
                 element: <CreateCategory />,
-                
+
               },
             ],
           },

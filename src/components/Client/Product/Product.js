@@ -53,7 +53,7 @@ function Product() {
                 </li>
                 <li>
                   <a
-                    href="cart.html"
+                    href="cart"
                     data-tippy="Add to cart"
                     data-tippy-inertia="true"
                     data-tippy-animation="shift-away"

@@ -104,7 +104,7 @@ function ProductDetail() {
                       label="Size:"
                       rules={[{ required: true, message: 'Please select the utilities!' }]}
                     >
-                      <Select mode="multiple" allowClear placeholder="Select your utilities">
+                      <Select allowClear placeholder="Select your utilities">
                         <Option value={JSON.stringify({ name: 'Size M', price: 20000 })}>Size M-20000</Option>
                         <Option value={JSON.stringify({ name: 'Size L', price: 30000 })}>Size L-30000</Option>
                         <Option value={JSON.stringify({ name: 'Size XL', price: 45000 })}>Size XL-45000</Option>
@@ -121,21 +121,23 @@ function ProductDetail() {
                     <Form.Item
                       name="Topping"
                       label="Topping"
-                      rules={[{ required: true, message: 'Please select the utilities!' }]}
+                      rules={[{ required: true, message: 'Please select a topping!' }]}
                     >
-                      <Select mode="multiple" allowClear placeholder="Select your utilities">
+                      <Select allowClear placeholder="Select your topping">
                         <Option value={JSON.stringify({ name: 'Thạch', price: 5000 })}>Thạch-5000</Option>
                         <Option value={JSON.stringify({ name: 'Chân trâu', price: 5000 })}> Chân trâu-5000</Option>
                         <Option value={JSON.stringify({ name: 'Pudding', price: 5000 })}>Pudding-5000</Option>
                         <Option value={JSON.stringify({ name: 'Phô mai', price: 5000 })}>Phô mai-5000</Option>
+                        <Option value={JSON.stringify({ name: 'Không topping' })}>Không topping</Option>
                       </Select>
                     </Form.Item>
+
 
                     <Form.Item
                       label="Ghi chú"
                       name="description"
                     >
-                      <Input.TextArea rows={2} showCount maxLength={100} placeholder='Ví dụ: 50% đường'/>
+                      <Input.TextArea rows={2} showCount maxLength={100} placeholder='Ví dụ: 50% đường' />
                     </Form.Item>
 
 

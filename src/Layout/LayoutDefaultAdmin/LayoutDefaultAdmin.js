@@ -24,6 +24,7 @@ function LayoutDefaultAdmin() {
     console.log(event?.nativeEvent?.type, value);
     // Do something with the search value
   };
+  
   return (
     <>
       <Layout className="layout-default">
